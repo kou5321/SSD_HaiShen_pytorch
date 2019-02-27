@@ -7,10 +7,11 @@ from imutils.video import FPS, WebcamVideoStream
 import argparse
 
 parser = argparse.ArgumentParser(description='Single Shot MultiBox Detection')
-parser.add_argument('--weights', default='weights/ssd300_COCO_300000.pth',
+parser.add_argument('--weights', default='weights/ssd300_mAP_77.43_v2.pth',
                     type=str, help='Trained state_dict file path')
 parser.add_argument('--cuda', default=True, type=bool,
                     help='Use cuda in live demo')
+parser.add_argument('--class_num',default=21,type=int)
 args = parser.parse_args()
 
 COLORS = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
@@ -31,7 +32,8 @@ def cv2_demo(net, transform):
         for i in range(detections.size(1)):
             j = 0
             while detections[0, i, j, 0] >= 0.6:
-                pt = (detections[0, i, j, 1:] * scale).cpu().numpy()
+                # pt = (detections[0, i, j, 1:] * scale).cpu().numpy()
+                pt = (detections[0, i, j, 1:] * scale).cuda()
                 cv2.rectangle(frame,
                               (int(pt[0]), int(pt[1])),
                               (int(pt[2]), int(pt[3])),
@@ -63,7 +65,8 @@ def cv2_demo(net, transform):
                 cv2.imshow('frame', frame)
                 if key2 == ord('p'):  # resume
                     break
-        cv2.imshow('frame', frame)
+        cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
+        cv2.imshow('frame', frame,)
         if key == 27:  # exit
             break
 
@@ -80,8 +83,8 @@ if __name__ == '__main__':
         if args.cuda:
             torch.set_default_tensor_type('torch.cuda.FloatTensor')
         else: torch.set_default_tensor_type('torch.FloatTensor')
-#########################################################################################
-    net = build_ssd('test', 300, 8)    # initialize SSD
+#####################################################################
+    net = build_ssd('test', 300, args.class_num)    # initialize SSD
     net.load_state_dict(torch.load(args.weights))
     transform = BaseTransform(net.size, (104/256.0, 117/256.0, 123/256.0))
 
