@@ -7,11 +7,11 @@ from imutils.video import FPS, WebcamVideoStream
 import argparse
 
 parser = argparse.ArgumentParser(description='Single Shot MultiBox Detection')
-parser.add_argument('--weights', default='weights/ssd300_mAP_77.43_v2.pth',
+parser.add_argument('--weights', default='weights/ssd300_COCO_100000.pth',
                     type=str, help='Trained state_dict file path')
 parser.add_argument('--cuda', default=True, type=bool,
                     help='Use cuda in live demo')
-parser.add_argument('--class_num',default=21,type=int)
+parser.add_argument('--class_num',default=8,type=int)
 args = parser.parse_args()
 
 COLORS = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
@@ -65,7 +65,9 @@ def cv2_demo(net, transform):
                 cv2.imshow('frame', frame)
                 if key2 == ord('p'):  # resume
                     break
+        ###---窗口大小可调整---###
         cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
+        ###---窗口大小可调整---###
         cv2.imshow('frame', frame,)
         if key == 27:  # exit
             break

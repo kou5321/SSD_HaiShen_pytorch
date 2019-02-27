@@ -32,7 +32,12 @@
 **note** :里面的图片和相应的标注文件都是本项目所用的。
 ## 使用说明
 
-1. 训练  
+1. 搭建环境
 首先需要搭建环境，建议用anaconda。 执行如下命令即可安装：`conda env create -f haishen.yaml`  
-进行训练：`python train.py --dataset_root path/to/VOCdevkit --batch_size 8`  如果显卡现存允许可以把`batch_size`设置大一些，这个视情况而定，但经过实际发现设置为 16 的时候性价比较高。  
-权重每5000次迭代保存一次，保存目录在 `weights/` 文件夹下。
+
+2. 训练  
+进行训练：`python train.py --dataset_root path/to/VOCdevkit --batch_size 8`  如果显卡现存允许可以把`batch_size`设置大一些，这个视情况而定，但经过实际发现设置为 16 训练较稳定。  
+权重每5000次迭代保存一次，保存目录在 `weights/` 文件夹下。 
+
+3. 实时监测  
+`python demo/live.py --weights 训练好的权重名称.pth`
