@@ -47,8 +47,7 @@ class Detect(Function):
                 c_mask = conf_scores[cl].gt(self.conf_thresh)
                 scores = conf_scores[cl][c_mask]
                 # if scores.dim() == 0:
-                #     continue
-                if scores.size(0) == 0:
+                if scores.size(0)==0:
                     continue
                 l_mask = c_mask.unsqueeze(1).expand_as(decoded_boxes)
                 boxes = decoded_boxes[l_mask].view(-1, 4)

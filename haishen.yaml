@@ -6,7 +6,6 @@ channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - defaults
 dependencies:
   - certifi=2018.11.29=py36_1000
   - openssl=1.1.1a=h14c3975_1000
