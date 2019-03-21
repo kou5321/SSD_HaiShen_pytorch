@@ -3,3 +3,7 @@
 *.vscode
 *.log
 __pycache__
+*.zip
+*.jpg
+./dataset
+./weights

@@ -26658,3 +26658,34 @@ iter 266550 || Loss: 577.8752746582031 || cur_lr: 1.0000000000000003e-11
 iter 266560 || Loss: 680.3674774169922 || cur_lr: 1.0000000000000003e-11 
 iter 266570 || Loss: 969.4552917480469 || cur_lr: 1.0000000000000003e-11 
 iter 266580 || Loss: 446.1990661621094 || cur_lr: 1.0000000000000003e-11 
+Namespace(basenet='vgg16_reducedfc.pth', batch_size=8, cuda=True, dataset='VOC', dataset_root='./dataset/data_SRDP/VOCdevkit/', gamma=0.1, lr=1e-06, momentum=0.9, num_workers=8, resume=None, save_folder='weights/', start_iter=0, visdom=False, weight_decay=0.0005) 
+Namespace(basenet='vgg16_reducedfc.pth', batch_size=8, cuda=True, dataset='VOC', dataset_root='./dataset/data_SRDP/VOCdevkit/', gamma=0.1, lr=1e-06, momentum=0.9, num_workers=8, resume=None, save_folder='weights/', start_iter=0, visdom=False, weight_decay=0.0005) 
+Namespace(basenet='vgg16_reducedfc.pth', batch_size=8, cuda=True, dataset='VOC', dataset_root='./dataset/data_SRDP/VOCdevkit/', gamma=0.1, lr=1e-06, momentum=0.9, num_workers=8, resume=None, save_folder='weights/', start_iter=0, visdom=False, weight_decay=0.0005) 
+iter 0 || Loss: 22.6954720986856 || cur_lr: 1e-06 
+iter 10 || Loss: 22.61510557640256 || cur_lr: 1e-06 
+iter 20 || Loss: 21.688742897727273 || cur_lr: 1e-06 
+iter 30 || Loss: 21.91668329384121 || cur_lr: 1e-06 
+iter 40 || Loss: 23.05707695370629 || cur_lr: 1e-06 
+iter 50 || Loss: 22.488977996396343 || cur_lr: 1e-06 
+iter 60 || Loss: 21.638185796049452 || cur_lr: 1e-06 
+iter 70 || Loss: 20.504781034395293 || cur_lr: 1e-06 
+iter 80 || Loss: 20.477922620271382 || cur_lr: 1e-06 
+iter 90 || Loss: 22.36570880793724 || cur_lr: 1e-06 
+iter 100 || Loss: 26.189589280348557 || cur_lr: 1e-06 
+Namespace(basenet='vgg16_reducedfc.pth', batch_size=16, cuda=True, dataset='VOC', dataset_root='./dataset/data_SRDP/VOCdevkit/', gamma=0.1, lr=1e-06, momentum=0.9, num_workers=8, resume=None, save_folder='weights/', start_iter=0, visdom=False, weight_decay=0.0005) 
+iter 0 || Loss: 24.003976004464285 || cur_lr: 1e-06 
+iter 10 || Loss: 23.301260270743533 || cur_lr: 1e-06 
+iter 20 || Loss: 24.572540638058683 || cur_lr: 1e-06 
+iter 30 || Loss: 23.284984761494528 || cur_lr: 1e-06 
+iter 40 || Loss: 21.53485107421875 || cur_lr: 1e-06 
+Namespace(basenet='vgg16_reducedfc.pth', batch_size=16, cuda=True, dataset='VOC', dataset_root='./dataset/data_SRDP/VOCdevkit/', gamma=0.1, lr=1e-06, momentum=0.9, num_workers=8, resume=None, save_folder='weights/', start_iter=0, visdom=False, weight_decay=0.0005) 
+iter 0 || Loss: 13769.994384765625 || cur_lr: 1e-06 
+iter 10 || Loss: 4431.853271484375 || cur_lr: 1e-06 
+iter 20 || Loss: 6224.736572265625 || cur_lr: 1e-06 
+iter 30 || Loss: 3692.58837890625 || cur_lr: 1e-06 
+iter 40 || Loss: 5290.649169921875 || cur_lr: 1e-06 
+iter 50 || Loss: 5507.52734375 || cur_lr: 1e-06 
+iter 60 || Loss: 2787.4938354492188 || cur_lr: 1e-06 
+iter 70 || Loss: 4007.4097900390625 || cur_lr: 1e-06 
+iter 80 || Loss: 3378.7161865234375 || cur_lr: 1e-06 
+iter 90 || Loss: 2915.3533935546875 || cur_lr: 1e-06 
