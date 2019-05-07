@@ -36,17 +36,17 @@ def str2bool(v):
 parser = argparse.ArgumentParser(
     description='Single Shot MultiBox Detector Evaluation')
 parser.add_argument('--trained_model',
-                    default='weights/ssd300_mAP_77.43_v2.pth', type=str,
+                    default='weights/ssd300_COCO_84000.pth', type=str,
                     help='Trained state_dict file path to open')
 parser.add_argument('--save_folder', default='eval/', type=str,
                     help='File path to save results')
 parser.add_argument('--confidence_threshold', default=0.01, type=float,
                     help='Detection confidence threshold')
-parser.add_argument('--top_k', default=5, type=int,
+parser.add_argument('--top_k', default=3, type=int,
                     help='Further restrict the number of predictions to parse')
 parser.add_argument('--cuda', default=True, type=str2bool,
                     help='Use cuda to train model')
-parser.add_argument('--voc_root', default=VOC_ROOT,
+parser.add_argument('--voc_root', default='../VOCdevkit_supernova',
                     help='Location of VOC root directory')
 parser.add_argument('--cleanup', default=True, type=str2bool,
                     help='Cleanup and remove results files following eval')
@@ -108,8 +108,8 @@ def parse_rec(filename):
     for obj in tree.findall('object'):
         obj_struct = {}
         obj_struct['name'] = obj.find('name').text
-        obj_struct['pose'] = obj.find('pose').text
-        obj_struct['truncated'] = int(obj.find('truncated').text)
+        # obj_struct['pose'] = obj.find('pose').text
+        # obj_struct['truncated'] = int(obj.find('truncated').text)
         obj_struct['difficult'] = int(obj.find('difficult').text)
         bbox = obj.find('bndbox')
         obj_struct['bbox'] = [int(bbox.find('xmin').text) - 1,

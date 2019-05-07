@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>000175.jpg</filename>
+	<path>/home/liuxiang/SRDP/VOC2007/JPEGImages/000175.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>853</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>holothurian</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>409</xmin>
+			<ymin>107</ymin>
+			<xmax>581</xmax>
+			<ymax>232</ymax>
+		</bndbox>
+	</object>
+</annotation>

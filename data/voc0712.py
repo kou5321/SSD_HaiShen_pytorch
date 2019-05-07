@@ -26,7 +26,10 @@ else:
 VOC_CLASSES = (  # always index 0
     'holothurian', 'echinus', 'scallop', 'echinus',
     'starfish', 'waterweeds', 'none')
-
+# VOC_CLASSES = (
+#     'isstar','newtarget','asteroid','isnova','known','noise','ghost','pity'
+# )
+# VOC_CLASSES = ('1','0')
 # note: if you used our download scripts, this should be right
 # VOC_ROOT = osp.join(HOME, "data/VOCdevkit/")
 VOC_ROOT = osp.join(HOME, "/home/zhb/Desktop/SRDP_data/VOCdevkit")
